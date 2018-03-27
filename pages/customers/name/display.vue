@@ -3,8 +3,8 @@
     <div class="content">
       <div class="subsection">
         <div style="margin: 25px 10px;">
-          <span class="subsection-title" style="vertical-align: middle;">Customers in Database</span>
-          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/customers/name">Search By name</nuxt-link>
+          <span class="subsection-title" style="vertical-align: middle;">Result</span>
+          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/customers/name">Search Another</nuxt-link>
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
           <li v-for="customer in customers" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">Print
@@ -21,7 +21,7 @@ import axios from '~/plugins/axios'
 
 export default {
   async asyncData () {
-    let { data } = await axios.get('/api/customers')
+    let { data } = await axios.get('/api/customers/name')
     return { customers: data }
   },
 

@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS Cart;
 CREATE TABLE Cart(
-  cart_id SERIAL,
+cart_id SERIAL,
 item_id INTEGER,
 item_quantity INTEGER,
 customer_id SERIAL,

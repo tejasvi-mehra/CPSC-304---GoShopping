@@ -4,20 +4,18 @@
     <div class="subsection">
     <form style="margin: 15px 15px;">
       <div style="margin: 10px 0;">
-        <span class="user-username">Username: </span>
-        <input type="text" :value="username" v-model="username"></input>
-      </div>
-      <div style="margin: 10px 0;">
-        <span class="user-password">Password: </span>
-        <input type="password" v-model="password"></input>
+        <span class="customer-fname">Enter Name: </span>
+        <input type="text" :value="fname" v-model="fname"></input>
       </div>
     </form>
-    <button type="button" class="button--grey" @click="submitInsert">Add User</button>
+    <button type="button" class="button--grey" @click="submitSearch">Search Customer</button>
+    
     </div>
   </div>
   </section>
-</template>
 
+
+</template>
 <script>
 import axios from '~/plugins/axios'
 
@@ -25,27 +23,23 @@ export default {
 
   data () {
     return {
-      userid: '',
-      username: '',
-      password: ''
+      fname: 'Search'
     }
   },
 
   methods: {
-    submitInsert () {
-      // console.log('NO-----------------------')
+    submitSearch () {
+      // console.log('here-----------------')
       let self = this
 
-      axios.post('/api/users/add', {
+      axios.post('/api/customers/name', {
         headers:
           {
             'Content-Type': 'application/json'
           },
         data:
           {
-            userid: self.userid,
-            username: self.username,
-            password: self.password
+            fname: self.fname
           }})
         .then((res) => {
           // res.data should contain the url for redirecting... bad practice
@@ -59,7 +53,7 @@ export default {
 
   head () {
     return {
-      title: `Add New User`
+      title: `Search`
     }
   }
 }
