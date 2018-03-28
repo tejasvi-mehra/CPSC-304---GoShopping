@@ -7,7 +7,8 @@ item_quantity INTEGER,
 price INTEGER NOT NULL,
 category_id SERIAL NOT NULL REFERENCES Category(category_id) ON DELETE CASCADE,
 PRIMARY KEY (item_id),
-FOREIGN KEY (category_id) REFERENCES Category(category_id));
+FOREIGN KEY (category_id) REFERENCES Category(category_id)
+CHECK (item_quantity >= 0));
 
 //Clothes
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
