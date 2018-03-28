@@ -8,7 +8,8 @@ price DECIMAL(12,2) NOT NULL,
 category_id SERIAL NOT NULL,
 sale_discount DECIMAL(5,4),
 PRIMARY KEY (item_id),
-FOREIGN KEY (category_id) REFERENCES Category(category_id));
+FOREIGN KEY (category_id) REFERENCES Category(category_id),
+CHECK(item_quantity >=0));
 
 INSERT INTO Items (name, manufacturer, item_quantity, price, category_id, sale_discount)
 VALUES ('Pyjamas', 'Ralph Lauren', 10, 10.00, 1, 0);

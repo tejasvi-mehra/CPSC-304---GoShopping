@@ -2,9 +2,9 @@
   <section class="user-view">
     <div class="content">
       <div class="subsection">
-        <span class="user-username" style="padding: 10px 0 10px 10px; margin: 10px 0 10px 0;">{{w.warehouse_id}}</span>
-      {{ `(${w.warehouse_id})` }}
-        <nuxt-link :to="{ path: `/warehouse/${w.warehouse_id}/update`, params: { address: w.warehouse_id }}">Update</nuxt-link>
+        <span class="user-username" style="padding: 10px 0 10px 10px; margin: 10px 0 10px 0;">{{i.item_id}}</span>
+      {{ `(${i.item_id})` }}
+        <nuxt-link :to="{ path: `/items/${i.item_id}/update`, params: { item_id: i.item_id }}">Update</nuxt-link>
       </div>
     </div>
   </section>
@@ -14,12 +14,12 @@
 import axios from '~/plugins/axios'
 
 export default {
-  name: 'warehouse',
+  name: 'items',
   asyncData ({ params, error }) {
     console.log(params)
-    return axios.get('/api/warehouse/' + params.warehouse_id)
+    return axios.get('/api/items/' + params.item_id)
       .then((res) => {
-        return { w: res.data }
+        return { i: res.data }
       })
       .catch((e) => {
         error({ statusCode: 404, message: 'User not found' })
@@ -27,7 +27,7 @@ export default {
   },
   head () {
     return {
-      title: `Warehouse: ${this.w.warehouse_id}`
+      title: `Items: ${this.i.item_id}`
     }
   }
 }
@@ -53,7 +53,7 @@ export default {
     margin 25px 10px
     font-size 26px
     font-weight 500
-  .w-warehouse_id
+  .i-item_id
     font-size 24px
     font-weight 500
   a

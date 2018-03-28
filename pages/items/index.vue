@@ -10,8 +10,13 @@
 
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
-          <li v-for="i in items" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
+
+          <li v-for="i in items"  style="padding: 10px 20px; margin: 0 25px; position: relative;">
+          <nuxt-link :to="{ path: `/items/${i.item_id}`, params: { item_id: i.item_id }}">
+
               {{ i.item_name + ' ' + i.manufacturer + ' ' + i.item_quantity + ' ' + i.price  }}
+              </nuxt-link>
+
           </li>
         </ul>
       </div>

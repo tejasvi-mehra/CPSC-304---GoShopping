@@ -4,8 +4,8 @@
       <div class="subsection">
         <form style="margin: 15px 15px;">
             <div style="margin: 10px 0;">
-              <span class="user-username">Warehouse-Address: </span>
-              <input type="text" :value="w.address" v-model="w.address"></input>
+              <span class="user-username">Item-Quantity: </span>
+              <input type="number" min = "0" oninput="validity.valid||(value='');" :value="i.item_quantity" v-model="i.item_quantity"></input>
             </div>
         </form>
         <button type="button" class="button--grey" @click="submitUpdate">Update</button>
@@ -19,9 +19,9 @@ import axios from '~/plugins/axios'
 
 export default {
   asyncData ({ params, error }) {
-    return axios.get('/api/warehouse/' + params.warehouse_id)
+    return axios.get('/api/items/' + params.item_id)
       .then((res) => {
-        return { w: res.data }
+        return { i: res.data }
       })
       .catch((e) => {
         error({ statusCode: 404, message: 'Warehouse not found' })
@@ -36,15 +36,21 @@ export default {
     submitUpdate () {
       let self = this
 
-      axios.post('/api/warehouse/update', {
+      axios.post('/api/items/update', {
         headers:
           {
             'Content-Type': 'application/json'
           },
         data:
           {
-            warehouse_id: self.w.warehouse_id,
-            address: self.w.address
+            item_id: self.i.item_id,
+            item_quantity: self.i.item_quantity,
+            manufacturer: self.i.manufacturer,
+            name: self.i.name,
+            price: self.i.price,
+            category_id: self.i.category_id,
+            sale_discount: self.i.sale_discount
+
           }})
         .then((res) => {
           // res.data should contain the url for redirecting... bad practice
@@ -58,7 +64,7 @@ export default {
 
   head () {
     return {
-      title: `Update Warehouse: ${this.w.warehouse_id}`
+      title: `Update Items: ${this.i.item_id}`
     }
   }
 }
@@ -84,7 +90,7 @@ export default {
     margin 25px 10px
     font-size 26px
     font-weight 500
-  .w-address
+  .i-item_quantity
     font-size 24px
     font-weight 500
     color #707070

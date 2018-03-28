@@ -9,7 +9,7 @@
         <ul style="list-style-type: none; padding: 0; margin: 0;">
 
           <li v-for="w in warehouse" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-          <nuxt-link :to="{ path: `/warehouse/${w.warehouse_id}?id=${w.warehouse_id}`, params: { warehouse_id: w.warehouse_id }}">
+          <nuxt-link :to="{ path: `/warehouse/${w.warehouse_id}`, params: { warehouse_id: w.warehouse_id }}">
           {{ w.warehouse_id + ' ' + ' ' + w.address }}
           </nuxt-link>
           </li>

@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29188bf1-1d49-4227-9bfb-37f9df007d57" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/customers/delete.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/items/_item_id/index.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/items/_item_id/update.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/customers/index.vue" afterPath="$PROJECT_DIR$/pages/customers/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/customers.js" afterPath="$PROJECT_DIR$/server/api/customers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/CreateItemsTable.sql" afterPath="$PROJECT_DIR$/db/CreateItemsTable.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/items/index.vue" afterPath="$PROJECT_DIR$/pages/items/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/warehouse/_warehouse_id/index.vue" afterPath="$PROJECT_DIR$/pages/warehouse/_warehouse_id/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/warehouse/_warehouse_id/update.vue" afterPath="$PROJECT_DIR$/pages/warehouse/_warehouse_id/update.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/warehouse/index.vue" afterPath="$PROJECT_DIR$/pages/warehouse/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/items.js" afterPath="$PROJECT_DIR$/server/api/items.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,8 +54,8 @@
       <file leaf-file-name="items.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/api/items.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -66,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="customers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/api/customers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+            <state relative-caret-position="529">
+              <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -80,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/pages/customers/delete.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -96,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/items/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,8 +128,6 @@
         <option value="$PROJECT_DIR$/pages/employee/all_warehouses.vue" />
         <option value="$PROJECT_DIR$/pages/cart/index.vue" />
         <option value="$PROJECT_DIR$/pages/items/max.vue" />
-        <option value="$PROJECT_DIR$/server/api/items.js" />
-        <option value="$PROJECT_DIR$/pages/items/index.vue" />
         <option value="$PROJECT_DIR$/pages/items/min.vue" />
         <option value="$PROJECT_DIR$/pages/Category/average_max.vue" />
         <option value="$PROJECT_DIR$/pages/Category/average_min.vue" />
@@ -133,6 +136,8 @@
         <option value="$PROJECT_DIR$/pages/customers/index.vue" />
         <option value="$PROJECT_DIR$/pages/customers/delete.vue" />
         <option value="$PROJECT_DIR$/server/api/customers.js" />
+        <option value="$PROJECT_DIR$/server/api/items.js" />
+        <option value="$PROJECT_DIR$/pages/items/index.vue" />
       </list>
     </option>
   </component>
@@ -461,14 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/items/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/Category/average_max.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -481,14 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="61" lean-forward="false" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/items.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -528,7 +517,7 @@
     <entry file="file://$PROJECT_DIR$/pages/customers/delete.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -543,8 +532,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/api/customers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        <state relative-caret-position="529">
+          <caret line="39" column="41" lean-forward="false" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/items.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/items/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
