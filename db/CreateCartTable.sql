@@ -4,9 +4,9 @@ CREATE TABLE Cart(
 item_id INTEGER NOT NULL,
 cart_quantity INTEGER NOT NULL,
 customer_id INTEGER NOT NULL REFERENCES Customers(customer_id) ON DELETE CASCADE,
-PRIMARY KEY (cart_id),
+PRIMARY KEY (cart_id, item_id),
 FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
-FOREIGN KEY (item_id) REFERENCES Items(item_id)
+FOREIGN KEY (item_id) REFERENCES Items(item_id),
 CHECK (cart_quantity >= 0));
 
 INSERT INTO Cart (item_id, cart_quantity, customer_id)
