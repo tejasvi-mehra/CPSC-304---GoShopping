@@ -16,6 +16,7 @@
 
               {{ i.item_name + ' ' + i.manufacturer + ' ' + i.item_quantity + ' ' + i.price  }}
               </nuxt-link>
+              
 
           </li>
         </ul>
