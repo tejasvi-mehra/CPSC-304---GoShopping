@@ -19,9 +19,9 @@ import axios from '~/plugins/axios'
 
 export default {
   asyncData ({ params, error }) {
-    return axios.get('/api/warehouse/' + params.address)
+    return axios.get('/api/warehouse/' + params.warehouse_id)
       .then((res) => {
-        return { warehouse: res.data }
+        return { w: res.data }
       })
       .catch((e) => {
         error({ statusCode: 404, message: 'Warehouse not found' })
@@ -43,6 +43,7 @@ export default {
           },
         data:
           {
+            warehouse_id: self.w.warehouse_id,
             address: self.w.address
           }})
         .then((res) => {
@@ -57,7 +58,7 @@ export default {
 
   head () {
     return {
-      title: `Update Warehouse: ${this.w.address}`
+      title: `Update Warehouse: ${this.w.warehouse_id}`
     }
   }
 }
