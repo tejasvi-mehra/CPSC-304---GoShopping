@@ -31,4 +31,30 @@ router.post('/items/count', bodyParser.json(), function (req, res, next) {
     })
 })
 
+router.get('/items/max', function (req, res, next) {
+  const query = 'SELECT item_id, item_name, price FROM Items I WHERE I.price = (SELECT MAX(I2.price) FROM Items I2);'
+  connection.query(query,
+    {
+      type: connection.QueryTypes.SELECT
+    })
+    .then(result => {
+      console.log(result)
+      res.send(JSON.stringify(result))
+    })
+})
+
+router.get('/items/min', function (req, res, next) {
+  const query = 'SELECT item_id, item_name, price FROM Items I WHERE I.price = (SELECT MIN(I2.price) FROM Items I2);'
+  connection.query(query,
+    {
+      type: connection.QueryTypes.SELECT
+    })
+    .then(result => {
+      console.log(result)
+      res.send(JSON.stringify(result))
+    })
+})
+
+
+
 export default router

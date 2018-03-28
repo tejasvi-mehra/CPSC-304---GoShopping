@@ -5,6 +5,9 @@
         <div style="margin: 25px 10px;">
           <span class="subsection-title" style="vertical-align: middle;">Items in Database</span>
           <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/items/count">Get items in category</nuxt-link>
+          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/items/max">Get Highest priced item</nuxt-link>
+          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/items/min">Get Lowest priced item</nuxt-link>
+
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
           <li v-for="i in items" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
