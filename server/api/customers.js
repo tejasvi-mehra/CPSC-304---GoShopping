@@ -14,4 +14,38 @@ router.get('/customers', function (req, res, next) {
     })
 })
 
+router.post('/customers/name', bodyParser.json(), function (req, res, next) {
+  console.log("HERE-------------------");
+  const name = req.body.data.name
+  const query = 'SELECT name,phone,address from Customers WHERE name = :name;'
+  connection.query(query,
+    {
+      type: connection.QueryTypes.SELECT,
+      replacements: {
+        name: name
+      }
+    })
+    .then(result => {
+      console.log(result)
+      res.send(JSON.stringify(result))
+    })
+})
+
+router.post('/customers/delete', bodyParser.json(), function (req, res, next) {
+//  console.log("HERE-------------------");
+  const customer_id = req.body.data.customer_id
+  const query = 'DELETE FROM Customers WHERE customer_id = :customer_id;'
+  connection.query(query,
+    {
+      type: connection.QueryTypes.SELECT,
+      replacements: {
+        customer_id: customer_id
+      }
+    })
+    .then(result => {
+      console.log(result)
+      res.send('/customers')
+    })
+})
+
 export default router

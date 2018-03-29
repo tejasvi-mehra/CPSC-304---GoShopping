@@ -10,6 +10,7 @@ PRIMARY KEY (item_id),
 FOREIGN KEY (category_id) REFERENCES Category(category_id),
 CHECK (item_quantity >= 0));
 
+
 //Clothes
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
 VALUES ('Pyjamas', 'Ralph Lauren', 10, 10, 1);

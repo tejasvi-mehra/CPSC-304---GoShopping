@@ -3,11 +3,21 @@
     <div class="content">
       <div class="subsection">
         <div style="margin: 25px 10px;">
-          <span class="subsection-title" style="vertical-align: middle;">Userssss in Database</span>
+          <span class="subsection-title" style="vertical-align: middle;">Items in Database</span>
+          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/items/count">Get items in category</nuxt-link>
+          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/items/max">Get Highest priced item</nuxt-link>
+          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/items/min">Get Lowest priced item</nuxt-link>
+
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
-          <li v-for="i in items" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-              {{ i.name }}
+
+          <li v-for="i in items"  style="padding: 10px 20px; margin: 0 25px; position: relative;">
+          <nuxt-link :to="{ path: `/items/${i.item_id}`, params: { item_id: i.item_id }}">
+
+              {{ i.item_name + ' ' + i.manufacturer + ' ' + i.item_quantity + ' ' + i.price  }}
+              </nuxt-link>
+              
+
           </li>
         </ul>
       </div>
