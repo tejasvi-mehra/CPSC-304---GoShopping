@@ -11,7 +11,6 @@ FOREIGN KEY (category_id) REFERENCES Category(category_id),
 CHECK (item_quantity >= 0));
 
 
-//Clothes
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
 VALUES ('Pyjamas', 'Ralph Lauren', 10, 10, 1);
 
@@ -24,7 +23,6 @@ VALUES ('Sweater', 'Adidas', 20, 149, 1);
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
 VALUES ('Air Jordan Shoes', 'Nike', 0, 249, 1);
 
-//Toiletries
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
 VALUES ('Toothbrush', 'Phillips', 30, 152, 3);
 
@@ -34,14 +32,12 @@ VALUES ('Shampoo', 'Dove', 15, 10, 3);
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
 VALUES ('Conditioner', 'Dove', 10, 8, 3);
 
-//Furniture
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
 VALUES ('Sofa', 'ILoveSofa', 40, 4900, 4);
 
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
 VALUES ('Bed', 'ILoveBed', 2, 10000, 4);
 
-//Electronics
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
 VALUES ('Xbox One', 'Microsoft', 0, 450, 5);
 
@@ -51,7 +47,6 @@ VALUES ('Playstation', 'Sony', 0, 350, 5);
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
 VALUES ('WiiU', 'Nintendo', 0, 250, 5);
 
-//Food
 INSERT INTO Items (item_name, manufacturer, item_quantity, price, category_id)
 VALUES ('Baked Beans', 'Heinz', 10, 10, 2);
 

@@ -2,7 +2,7 @@
   <section class="user-view">
     <div class="content">
       <div class="subsection">
-        <span class="user-username" style="padding: 10px 0 10px 10px; margin: 10px 0 10px 0;">{{i.item_id}}</span>
+        <span class="user-username" style="padding: 10px 0 10px 10px; margin: 10px 0 10px 0;">{{i.item_name}}</span>
       {{ `(${i.item_id})` }}
         <nuxt-link :to="{ path: `/items/${i.item_id}/update`, params: { item_id: i.item_id }}">Update</nuxt-link>
       </div>
