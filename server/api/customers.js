@@ -15,9 +15,10 @@ router.get('/customers', function (req, res, next) {
 })
 
 router.post('/customers/name', bodyParser.json(), function (req, res, next) {
-  console.log("HERE-------------------");
+  const options = req.body.data.options
   const name = req.body.data.name
-  const query = 'SELECT name,phone,address from Customers WHERE name = :name;'
+  var temp = 'SELECT ' + options
+  const query = temp + ' from Customers WHERE name = :name;'
   connection.query(query,
     {
       type: connection.QueryTypes.SELECT,

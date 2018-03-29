@@ -6,13 +6,39 @@
       <div style="margin: 10px 0;">
         <span class="customer-fname">Enter Name: </span>
         <input type="text" :value="fname" v-model="fname"></input>
+        <br>Columns available:
+        <br>
+        <br>
+        <input  type="checkbox" v-model="customer_id">Customer ID<br>
+        <input  type="checkbox" v-model="name">Name<br>
+        <input  type="checkbox" v-model="phone">Phone<br>
+        <input  type="checkbox" v-model="email">Email<br>
+        <input  type="checkbox" v-model="credit_card">Credit Card<br>
+        <input  type="checkbox" v-model="address">Address<br>
       </div>
     </form>
     <button type="button" class="button--grey" @click="submitSearch">Search Customer</button>
 
     <ul style="list-style-type: none; padding: 0; margin: 0;">
       <li v-for="customer in customers" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-      {{ customer.name + '&nbsp&nbsp&nbsp&nbsp' + customer.phone + '&nbsp&nbsp&nbsp&nbsp' + customer.address }}
+        <template v-if="customer.customer_id">
+          {{ customer.customer_id }}
+        </template>
+        <template v-if="customer.name">
+          {{ customer.name }}
+        </template>
+        <template v-if="customer.phone">
+          {{ customer.phone }}
+        </template>
+        <template v-if="customer.email">
+          {{ customer.email }}
+        </template>
+        <template v-if="customer.creditcard">
+          {{ customer.creditcard }}
+        </template>
+        <template v-if="customer.address">
+          {{ customer.address }}
+        </template>
       </li>
     </ul>
 
@@ -30,7 +56,8 @@ export default {
   data () {
     return {
       customers: '',
-      fname: 'Search'
+      fname: 'Search',
+      name: false
     }
   },
 
@@ -42,6 +69,26 @@ export default {
   methods: {
     submitSearch () {
       let self = this
+      let values = ''
+      if (self.customer_id) {
+        values = values + 'customer_id,'
+      }
+      if (self.name) {
+        values = values + 'name,'
+      }
+      if (self.email) {
+        values = values + 'email,'
+      }
+      if (self.phone) {
+        values = values + 'phone,'
+      }
+      if (self.address) {
+        values = values + 'address,'
+      }
+      if (self.credit_card) {
+        values = values + 'creditcard,'
+      }
+      console.log(values.substring(0, values.length - 1))
       axios.post('/api/customers/name', {
         headers:
           {
@@ -49,7 +96,8 @@ export default {
           },
         data:
         {
-          name: self.fname
+          name: self.fname,
+          options: values.substring(0, values.length - 1)
         }})
         .then((res) => {
           // res.data should contain the url for redirecting... bad practice
