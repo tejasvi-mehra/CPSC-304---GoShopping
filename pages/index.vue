@@ -3,18 +3,16 @@
     <div>
     <Logo />
       <h1 class="title">
-        Demo Project
+        Group 40
       </h1>
       <div class="links">
-        <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/users">View Users</nuxt-link>
-        <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/cart">View cart</nuxt-link>
-        <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/category">View categories</nuxt-link>
-        <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/employee">View Employees</nuxt-link>
-        <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/items">View Items</nuxt-link>
-        <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/loyalty">View Loyalty Points</nuxt-link>
-        <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/customers">View Customers</nuxt-link>
-        <nuxt-link class="button--grey link" style="margin-left: 15px;" to="/warehouse">View Warehouse</nuxt-link>
-
+        <nuxt-link class="button--grey link" style="margin-left: 30px; margin-bottom: 30px;" to="/cart">View Cart</nuxt-link>
+        <nuxt-link class="button--grey link" style="margin-left: 30px; margin-bottom: 30px;" to="/category">View Categories</nuxt-link>
+        <nuxt-link class="button--grey link" style="margin-left: 30px; margin-bottom: 30px;" to="/employee">View Employees</nuxt-link>
+        <nuxt-link class="button--grey link" style="margin-left: 30px; margin-bottom: 30px;" to="/items">View Items</nuxt-link>
+        <nuxt-link class="button--grey link" style="margin-left: 30px; margin-bottom: 30px;" to="/loyalty">View Loyalty Points</nuxt-link>
+        <nuxt-link class="button--grey link" style="margin-left: 30px; margin-bottom: 30px;" to="/customers">View Customers</nuxt-link>
+        <nuxt-link class="button--grey link" style="margin-left: 30px; margin-bottom: 30px;" to="/warehouse">View Warehouse</nuxt-link>
       </div>
     </div>
   </section>
