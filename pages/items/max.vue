@@ -1,32 +1,33 @@
 <template>
   <section class="user-view">
-    <div class="content">
-      <div class="subsection">
-      {{ user.username }}
-        <span class="user-password" style="padding: 10px 10px; margin: 10px 0 10px 0;">{{ `(${user.password})` }}</span>
-        <nuxt-link :to="{ path: `/users/${user.username}/update`, params: { username: user.username }}">Update</nuxt-link>
-      </div>
-    </div>
-  </section>
-</template>
+  <div class="content">
+    <div class="subsection">
 
+    <ul style="list-style-type: none; padding: 0; margin: 0;">
+      <li v-for="i in items" style="padding: 10px 20px; margin: 0 25px; position: relative;">
+        Highest priced item: {{ ' ' + i.item_name + ' $' + i.price }}
+      </li>
+    </ul>
+
+    </div>
+  </div>
+  </section>
+
+
+</template>
 <script>
 import axios from '~/plugins/axios'
 
 export default {
-  name: 'username',
-  asyncData ({ params, error }) {
-    return axios.get('/api/users/' + params.username)
-      .then((res) => {
-        return { user: res.data }
-      })
-      .catch((e) => {
-        error({ statusCode: 404, message: 'User not found' })
-      })
+  async asyncData () {
+    let { data } = await axios.get('/api/items/max')
+    console.log(data)
+    return { items: data }
   },
+
   head () {
     return {
-      title: `User: ${this.user.username}`
+      title: 'Items'
     }
   }
 }
@@ -55,13 +56,14 @@ export default {
   .user-username
     font-size 24px
     font-weight 500
+    color #707070
   .user-password
     font-size 24px
     font-weight 500
     color #707070
   a
     text-decoration underline
-    &:hover
-      color #515ec4
+  &:hover
+    color #515ec4
 
 </style>
