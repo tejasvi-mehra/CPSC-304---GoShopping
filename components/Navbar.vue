@@ -6,7 +6,7 @@
           <img class="logo" src="~/assets/img/happy.png" alt="logo">
         </router-link>
         <nuxt-link to="/customers">Customers</nuxt-link>
-        <nuxt-link to="/category">Cateogry</nuxt-link>
+        <nuxt-link to="/category">Category</nuxt-link>
         <nuxt-link to="/employee">Employees</nuxt-link>
         <nuxt-link to="/items">Items</nuxt-link>
         <nuxt-link to="/loyalty">Loyalty</nuxt-link>
@@ -54,7 +54,7 @@ export default {}
         color #fff
         font-weight 400
       &:nth-child(6)
-        margin-right 0
+        margin-right 5
     .github
       font-size .9em
       margin 0
