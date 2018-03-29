@@ -15,7 +15,7 @@ router.get('/cart', function (req, res, next) {
 })
 
 router.get('/cart/all_items', function (req, res, next) {
-  const query = 'SELECT DISTINCT cart_id FROM Cart C WHERE NOT EXISTS (SELECT T.category_id FROM Category T WHERE NOT EXISTS ( SELECT P.cart_id  FROM (SELECT * FROM Cart NATURAL JOIN Items) P WHERE P.cart_id = C.cart_id));'
+  const query = 'SELECT DISTINCT cart_id FROM Cart C WHERE NOT EXISTS ((SELECT T.category_id FROM Category T) EXCEPT (SELECT P.category_id FROM (SELECT * FROM Cart NATURAL JOIN Items) P    WHERE P.cart_id = C.cart_id));'
   connection.query(query,
     {
       type: connection.QueryTypes.SELECT
