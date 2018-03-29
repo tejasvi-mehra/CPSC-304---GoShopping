@@ -188,8 +188,6 @@ CREATE TABLE Loyalty(
   VALUES (1, 5, 1);
   INSERT INTO Cart (item_id, cart_quantity, customer_id)
   VALUES (2, 3, 1);
-  INSERT INTO Cart (item_id, cart_quantity, customer_id)
-  VALUES (3, 1, 2);
   INSERT INTO Cart (cart_id, item_id, cart_quantity, customer_id)
   VALUES (3, 1, 1, 2);
   INSERT INTO Cart (cart_id, item_id, cart_quantity, customer_id)
