@@ -5,7 +5,7 @@
         <div style="margin: 25px 10px;">
           <span class="subsection-title" style="vertical-align: middle;">Category in Database</span>
           <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/category/average_max">Get category with max average price</nuxt-link>
-          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/category/average_min">Get category with min average price</nuxt-link>
+          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/category/averageMin">Get category with min average price</nuxt-link>
 
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">

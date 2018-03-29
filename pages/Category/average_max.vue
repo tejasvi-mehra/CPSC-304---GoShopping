@@ -5,7 +5,7 @@
 
     <ul style="list-style-type: none; padding: 0; margin: 0;">
       <li v-for="c in category" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-        {{ ' ' + c.category_name + ' $' + c.avg }}
+      {{ ' ' + c.category_name + ' $' + c.avg }}
       </li>
     </ul>
 

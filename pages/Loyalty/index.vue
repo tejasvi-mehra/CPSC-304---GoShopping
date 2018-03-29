@@ -3,11 +3,11 @@
     <div class="content">
       <div class="subsection">
         <div style="margin: 25px 10px;">
-          <span class="subsection-title" style="vertical-align: middle;">Users in Database</span>
+          <span class="subsection-title" style="vertical-align: middle;">Loyalty points</span>
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
           <li v-for="l in loyalty" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-              {{ l.customer_id + '' + l.points }}
+              {{ l.name + ' ' + l.points }}
           </li>
         </ul>
       </div>

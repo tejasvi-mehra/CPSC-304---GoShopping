@@ -6,10 +6,20 @@
           <span class="subsection-title" style="vertical-align: middle;">Carts in Database</span>
           <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/cart/all_items">Carts with all items</nuxt-link>
         </div>
-        <ul style="list-style-type: none; padding: 0; margin: 0;">
-          <li v-for="c in cart" :key="index" style="padding: 10px 20px; margin: 0 25px; position: relative;">
-            {{ c.cart_id + ' ' + c.customer_id + ' ' + c.item_id + ' ' + c.cart_quantity }}
-          </li>
+        <table >
+          <tr>
+            <th>Cart ID</th>
+            <th>Customer ID</th>
+            <th>Item ID</th>
+            <th>Quantity</th>
+          </tr>
+          <tr v-for="c in cart">
+            <td>{{ c.cart_id }}</td>
+            <td>{{ c.customer_id }}</td>
+            <td>{{ c.item_id }}</td>
+            <td>{{ c.cart_quantity }}</td>
+          </tr>
+        </table>
         </ul>
       </div>
     </div>

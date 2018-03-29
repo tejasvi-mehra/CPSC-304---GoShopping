@@ -4,7 +4,6 @@
       <div class="subsection">
         <div style="margin: 25px 10px;">
           <span class="subsection-title" style="vertical-align: middle;">Warehouses in Database</span>
-          <nuxt-link class="button--grey" style="padding: 5px 20px; text-decoration: none;" to="/warehouse/add">Add Warehouse</nuxt-link>
         </div>
         <ul style="list-style-type: none; padding: 0; margin: 0;">
 

@@ -6,6 +6,13 @@
           <img class="logo" src="~/assets/img/happy.png" alt="logo">
         </router-link>
         <nuxt-link to="/customers">Customers</nuxt-link>
+        <nuxt-link to="/category">Cateogry</nuxt-link>
+        <nuxt-link to="/employee">Employees</nuxt-link>
+        <nuxt-link to="/items">Items</nuxt-link>
+        <nuxt-link to="/loyalty">Loyalty</nuxt-link>
+        <nuxt-link to="/cart">Cart</nuxt-link>
+        <nuxt-link to="/warehouse">Warehouses</nuxt-link>
+
         <a class="github" href="https://github.com/ajmustapha/CPSC-304---GoShopping" target="_blank" rel="noopener">
           Github
         </a>
